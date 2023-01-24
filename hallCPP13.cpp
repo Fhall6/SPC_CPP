@@ -1,5 +1,5 @@
 //Frank Hall III
-//January 18, 2023 ©
+//January 18, 2023 ¬©
 //Project: Chapter 5 Program
 /*Description:
 *
@@ -12,23 +12,24 @@
 *		- cnt1 and cnt2 will be used in Chapter 5 drop box as counters for loops. Do NOT create additional
 *		  variables. Points will be taken off for any additional variable creation.
 * 2. Prompt the user for a whole number between 1 and 6.
-* 3. Accept user input of the number ñ use Guess as the variable
+* 3. Accept user input of the number ‚Äì use Guess as the variable
 * 4. Simulate rolling a die with the following code (DieRoll variable is defined in 1):
 *		DieRoll = rand()%6+1;    //Note: rand is a function returning 0 thru 32767.
 * 5. Display Guess and DieRoll on the Screen with good user labeling information. Additionally, display
-*    îWINNERî if Guess and DieRoll are equal.
-* 6. Display ìDOUBLE WINNERî if DieRoll is an odd number (use modulo). Not related to question 5 above.
-*    NOT an if else...
-* 7. If the DieRoll added to the Guess is greater than or equal to 10 and DieRoll is even Display ìYOU
-*    ARE A LUCKY PERSONî. This is unrelated to the previous requirements. NOT an if else...Make this a
+*    ‚ÄùWINNER‚Äù if Guess and DieRoll are equal.
+* 6. Display ‚ÄúDOUBLE WINNER‚Äù if DieRoll is an odd number (use modulo). Not related to question 5 above.
+*    NOT an if else....
+* 
+* 7. If the DieRoll added to the Guess is greater than or equal to 10 and DieRoll is even Display ‚ÄúYOU
+*    ARE A LUCKY PERSON‚Äù. This is unrelated to the previous requirements. NOT an if else...Make this a
 *    complex if test. NOT nested if statements.
 * cnt1 and cnt2 should be used for the loop control variables.
 * ================================ The above was done in Chapter 4 Program (hallCPP12) ===============================
 * 8.  Create a for loop to print the numbers 1 thru 5, all on the same line.
-* 9.  On the next output line create a for loop which will count backwards by 1ís from 100 to 0 (inclusive of 100 and 0) 
+* 9.  On the next output line create a for loop which will count backwards by 1‚Äôs from 100 to 0 (inclusive of 100 and 0) 
 *     only displaying every number which is evenly divisible by 17.
 * 10. Write a while loop to do the same as #9 above.
-* 11. Write a doÖwhile loop to:
+* 11. Write a do‚Ä¶while loop to:
 *	a.  ask the user for a number   ( use the variable Guess).
 *	b.   get user input.
 *	c.   tell the user the remainder of dividing the number by 5 (modulo) even if result is 0.
@@ -44,7 +45,7 @@
 * 
 * 12. Create a for loop within a for loop.  The outer loop will count from 1 to 5. The inner loop will count from
 *      1 to 6 and write the product of the outer loop counter multiplied by the inner loop counter, all on the same 
-*	  line with one tab (ë\tí) between. Between the loop ends put a line feed (endl or \n). The result should look 
+*	  line with one tab (‚Äò\t‚Äô) between. Between the loop ends put a line feed (endl or \n). The result should look 
 *	  like this:
 *		1          2          3          4          5          6
 *		2          4          6          8          10         12
@@ -57,62 +58,73 @@ using namespace std;
 
 int main()
 {
+	// 1.) 
 	int DieRoll, Guess, cnt1, cnt2;
 	srand((unsigned int)time(NULL));
 
+	// 2.)
 	cout << "Please enter a whole number between 1 and 6. " << endl;
+
+	// 3.)
 	cin >> Guess;
+
+	// 4.)
 	DieRoll = rand() % 6 + 1;    //Note: rand is a function returning 0 thru 32767.
 
-	cout << "\nGuess: " << Guess << endl;;
-	cout << "Die Roll: " << DieRoll << endl;;
-
+	// 5.)
+	cout << "\nGuess: " << Guess << endl;
+	cout << "Dice Roll: " << DieRoll << "\n\n";
 	if (Guess == DieRoll)
 	{
-		cout << "WINNER\n" << endl;
+		cout << "WINNER" << endl;
 	}
+
+	// 6.)
 	if (DieRoll % 2)
 	{
-		cout << "DOUBLE WINNER\n" << endl;
+		cout << "DOUBLE WINNER" << endl;
 	}
+
+	// 7.) 
 	if (((DieRoll + Guess) >= 10) && (DieRoll % 2 == 0))
 	{
-		cout << "YOU ARE A LUCKY PERSON\n" << endl;
+		cout << "YOU ARE A LUCKY PERSON" << endl;
 	}
 
-	// Question 8
+	cout << endl;
+
+	// 8.)
 	for (int cnt1 = 1; cnt1 <= 5; cnt1++)
 	{
-		cout << setw(2) << cnt1 << "   ";
+		cout << cnt1 << "   ";
 
 	}
 	cout << "\n\n";
 	
-	// Question 9
-	for (int cnt2 = 100; cnt2 > 0; cnt2--) 
+	// 9.)
+	for (int cnt1 = 100; cnt1 > 0; cnt1--) 
 	{
-		if (cnt2 % 17 == 0)
+		if (cnt1 % 17 == 0)
 		{
-			cout << cnt2 << "   ";
+			cout << cnt1 << "   ";
 		}
 	}
 	cout << "\n\n";
 	
-	// Question 10
-	cnt1 = 0;
-	cnt2 = 100;
+	// 10.)
+	cnt1 = 100;
 
-	while (cnt2 > 0)
+	while (cnt1 > 0)
 	{
-		if (cnt2 % 17 == 0)
+		if (cnt1 % 17 == 0)
 		{
-			cout << cnt2 << "   ";
+			cout << cnt1 << "   ";
 		}
-		--cnt2;
+		--cnt1;
 	}
 	cout << "\n";
 
-	// Question 11
+	// 11.)
 	do {
 		cout << "\nEnter '0' to end program!\n";
 		cout << "Please enter a number: ";
@@ -124,7 +136,7 @@ int main()
 	} while (Guess != 0);
 	cout << "\n";
 
-	// Question 12
+	// 12.)
 	for (cnt1 = 1; cnt1 <= 5; cnt1++)
 	{
 		for (cnt2 = 1; cnt2 <= 6; cnt2++)
