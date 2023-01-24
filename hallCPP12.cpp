@@ -1,5 +1,5 @@
 //Frank Hall III
-//January 18, 2023 ©
+//January 18, 2023 ¬©
 //Project: Chapter 4 Program
 /*Description:
 * 
@@ -12,15 +12,15 @@
 *		- cnt1 and cnt2 will be used in Chapter 5 drop box as counters for loops. Do NOT create additional 
 *		  variables. Points will be taken off for any additional variable creation.
 * 2. Prompt the user for a whole number between 1 and 6. 
-* 3. Accept user input of the number ñ use Guess as the variable
+* 3. Accept user input of the number ‚Äì use Guess as the variable
 * 4. Simulate rolling a die with the following code (DieRoll variable is defined in 1):
 *		DieRoll = rand()%6+1;    //Note: rand is a function returning 0 thru 32767.
 * 5. Display Guess and DieRoll on the Screen with good user labeling information. Additionally, display
-*    îWINNERî if Guess and DieRoll are equal.
-* 6. Display ìDOUBLE WINNERî if DieRoll is an odd number (use modulo). Not related to question 5 above. 
+*    ‚ÄùWINNER‚Äù if Guess and DieRoll are equal.
+* 6. Display ‚ÄúDOUBLE WINNER‚Äù if DieRoll is an odd number (use modulo). Not related to question 5 above. 
 *    NOT an if else...
-* 7. If the DieRoll added to the Guess is greater than or equal to 10 and DieRoll is even Display ìYOU 
-*    ARE A LUCKY PERSONî. This is unrelated to the previous requirements. NOT an if else...Make this a 
+* 7. If the DieRoll added to the Guess is greater than or equal to 10 and DieRoll is even Display ‚ÄúYOU 
+*    ARE A LUCKY PERSON‚Äù. This is unrelated to the previous requirements. NOT an if else...Make this a 
 *    complex if test. NOT nested if statements.
 * We will add loops when we get to Chapter 5 to this program. */ 
 
@@ -30,24 +30,34 @@ using namespace std;
 
 int main()
 {
+	// 1.) 
 	int DieRoll, Guess, cnt1, cnt2;
 	srand((unsigned int)time(NULL));
 
+	// 2.)
 	cout << "Please enter a whole number between 1 and 6. " << endl;
+	
+	// 3.)
 	cin >> Guess;
+	
+	// 4.)
 	DieRoll = rand() % 6 + 1;    //Note: rand is a function returning 0 thru 32767.
 
-	cout << "Guess: " << Guess << endl;;
-	cout << "Die Roll: " << DieRoll << endl;;
-
+	// 5.)
+	cout << "\nGuess: " << Guess << endl;;
+	cout << "Dice Roll: " << DieRoll << endl;;
 	if (Guess == DieRoll)
 	{
 		cout << "WINNER" << endl;
-	}			
+	}
+
+	// 6.)
 	if (DieRoll % 2)
 	{
 		cout << "DOUBLE WINNER" << endl;
 	}
+
+	// 7.) 
 	if (((DieRoll + Guess) >= 10) && (DieRoll % 2 == 0))
 	{
 		cout << "YOU ARE A LUCKY PERSON" << endl;
