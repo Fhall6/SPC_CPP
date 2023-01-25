@@ -95,8 +95,8 @@ void calcAverage(int& testScore1, int& testScore2, int& testScore3, int& testSco
 	//calculate the average
 	average = num / denom;
 	
-	cout << "\nThe lowest score " << lowestScore << " was dropped." << endl;
-	cout << "The average of the highest four test scores is " << average << endl;
+	cout << "\nYour lowest test score was a " << lowestScore << ". This score was dropped." << endl;
+	cout << "The average of the highest four test scores is " << average << "." << endl;
 }
 
 int findLowest(int& testScore1, int& testScore2, int& testScore3, int& testScore4, int& testScore5)
