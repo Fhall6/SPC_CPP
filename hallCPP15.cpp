@@ -1,6 +1,6 @@
 // Frank Hall III
 // January 24, 2023 ©
-// Project: Chapter 6 Program
+// Project: Chapter 7 Program
 /* Description:
  *
  * Include the following header files in your program: string, iomanip, iostream
@@ -66,15 +66,28 @@
 
 int main()
 {
+	// 1a.)
 	double dArr[5];
+	
+	// 1b.)
 	long lArr[7] = { 100000, 134567, 123456, 9, -234567, -1, 123489 };
+	
+	// 1c.)
 	int iArr[3][5];
+	
+	// 1d.)
 	char sName[30] = {"Frank Hall III"};
+	
+	// 2.)
 	short cnt1, cnt2;
 	long double total = 0.0;
+	
+	// 3.)
 	long highest;
 	srand((unsigned int)time(NULL));
 	//cout << sizeof(dArr); // returned back 40 -> 5 elements that are 8 bytes long
+	
+	// 4.)
 	for (cnt1 = 0; cnt1 < sizeof(dArr)/sizeof(double); cnt1++) // https://www.w3schools.com/cpp/cpp_arrays_size.asp - link that helped understand size of 
 	{
 		dArr[cnt1] = rand();
@@ -84,14 +97,20 @@ int main()
 	{
 		cout << dArr[cnt1] << " ";
 	}
+
+	// 5.)
 	cout << "]\n";
 	for (cnt1 = 0; cnt1 < sizeof(dArr) / sizeof(double); cnt1++)
 	{
 		total += dArr[cnt1];
 	}
+	
+	// 6.)
 	cout << "\nThe sum of the array \"dArr\" is " << total << "." << endl;
 	cout << "\nThe average of the \"dArr\" array is " << (total / (sizeof(dArr) / sizeof(double))) << "." << endl;
 
+
+	// 7.)
 	for (cnt1 = 1, highest = lArr[0]; cnt1 < 7; cnt1++)
 	{
 		if (lArr[cnt1] > highest)
@@ -102,8 +121,10 @@ int main()
         //replace highest if the value in lArr[cnt]  is higher than the value in variable highest
 	}
 
+	// 8.)
 	cout << "\n" << highest << " is the highest value in the \"lArr\" array.\n" << endl;
 
+	// 9.)
 	for (cnt1 = 0; cnt1 < 3; cnt1++)
 	{
 		for (cnt2 = 0; cnt2 < 5; cnt2++)
@@ -112,6 +133,7 @@ int main()
 		}
 	}
 
+	// 10.)
 	for (cnt1 = 0; cnt1 < 3; cnt1++)
 	{
 		for (cnt2 = 0; cnt2 < 5; cnt2++)
@@ -122,5 +144,17 @@ int main()
 	}
 	cout << "\n";
 
+	// 11.)
+	for (cnt2 = 0; cnt2 < 5; cnt2++)
+	{
+		for (cnt1 = 0; cnt1 < 3; cnt1++)
+		{
+			cout << iArr[cnt1][cnt2] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "\n";
+
+	//getline(cin, sName);
 	return 0;
 }
