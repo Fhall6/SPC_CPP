@@ -68,32 +68,32 @@ int main()
 {
 	// 1a.)
 	double dArr[5];
-	
+
 	// 1b.)
 	long lArr[7] = { 100000, 134567, 123456, 9, -234567, -1, 123489 };
-	
+
 	// 1c.)
 	int iArr[3][5];
-	
+
 	// 1d.)
-	char sName[30] = {"Frank Hall III"};
-	
+	char sName[30] = { "Frank Hall III" };
+
 	// 2.)
 	short cnt1, cnt2;
 	long double total = 0.0;
-	
+
 	// 3.)
 	long highest;
 	srand((unsigned int)time(NULL));
 	//cout << sizeof(dArr); // returned back 40 -> 5 elements that are 8 bytes long
-	
+
 	// 4.)
-	for (cnt1 = 0; cnt1 < sizeof(dArr)/sizeof(double); cnt1++) // https://www.w3schools.com/cpp/cpp_arrays_size.asp - link that helped understand size of 
+	for (cnt1 = 0; cnt1 < sizeof(dArr) / sizeof(double); cnt1++) // https://www.w3schools.com/cpp/cpp_arrays_size.asp - link that helped understand size of 
 	{
 		dArr[cnt1] = rand();
 	}
 	cout << "\n[ ";
-	for (cnt1 = 0; cnt1 < sizeof(dArr)/sizeof(double); cnt1++)
+	for (cnt1 = 0; cnt1 < sizeof(dArr) / sizeof(double); cnt1++)
 	{
 		cout << dArr[cnt1] << " ";
 	}
@@ -104,7 +104,7 @@ int main()
 	{
 		total += dArr[cnt1];
 	}
-	
+
 	// 6.)
 	cout << "\nThe sum of the array \"dArr\" is " << total << "." << endl;
 	cout << "\nThe average of the \"dArr\" array is " << (total / (sizeof(dArr) / sizeof(double))) << "." << endl;
@@ -117,8 +117,8 @@ int main()
 		{
 			highest = lArr[cnt1];
 		}
-        //logic to compare each array element, starting with lArr[1], with highest
-        //replace highest if the value in lArr[cnt]  is higher than the value in variable highest
+		//logic to compare each array element, starting with lArr[1], with highest
+		//replace highest if the value in lArr[cnt]  is higher than the value in variable highest
 	}
 
 	// 8.)
@@ -140,7 +140,7 @@ int main()
 		{
 			cout << iArr[cnt1][cnt2] << "\t";
 		}
-		cout << endl;
+		cout << "\n";
 	}
 	cout << "\n";
 
@@ -151,10 +151,28 @@ int main()
 		{
 			cout << iArr[cnt1][cnt2] << "\t";
 		}
-		cout << endl;
+		cout << "\n";
 	}
 	cout << "\n";
 
-	//getline(cin, sName);
+	// 12.)
+	cin.getline(sName, 30);
+	cout << endl;
+
+	// 13.)
+	cnt1 = 0;
+	while (sName[cnt1] != '\0')
+	{
+		cout << sName[cnt1] << " = " << (int)sName[cnt1] << '\n'; // type-cast char to an int to get the value
+		cnt1++;
+	}
+	cout << "\n";
+
+	// 14.)
+	strcpy_s(sName, "Albert Einstein");
+
+	// 15.)
+	cout << "'" << sName[11] << "' is the 12th character in the char string \"sName\".\n" ;
+
 	return 0;
 }
