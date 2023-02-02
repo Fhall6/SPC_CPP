@@ -1,8 +1,8 @@
 # SPC_CPP
 
 This repository is designated for work assigned in COP2220. 
-I don't give anyone other than myself (Frank Hall III) to 
-use this for their course work without my permission. If anybody 
+I don't give anyone other than myself (Frank Hall III) permission to 
+use this for their course work. If anybody 
 has questions, feel free to reach out to me via email: 
 fhall3rd@yahoo.com
 
