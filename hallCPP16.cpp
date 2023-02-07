@@ -224,17 +224,36 @@ int main()
 	cout << "\n\n";
 
 	// 21.)
-
+	for (cnt1 = 0; cnt1 < 5; cnt1++)
+	{
+		cout << *(dArr + cnt1) << " ";
+		pdArray++;
+	}
+	cout << "\n\n";
 
 	// 22.)
+	int iArray[100];
+	int* piArray = nullptr;
+
+	piArray = iArray;
 
 
 	// 23.)
-
+	for (cnt1 = 0; cnt1 < 100; cnt1++)
+	{
+		iArray[cnt1] = rand() % 50 + 1;
+	}
 
 	// 24.)
-	
-
+	for (cnt1 = 0; cnt1 < 10; cnt1++)
+	{
+		for (cnt2 = 0; cnt2 < 10; cnt2++)
+		{
+			//cout << setw(2) << (cnt1 * 10 + cnt2) << " ";
+			cout << setw(2) << iArray[(cnt1 * 10 + cnt2)] << " ";
+		}
+		cout << "\n";
+	}
 
 	return 0;
 }
