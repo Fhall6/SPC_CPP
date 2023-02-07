@@ -1,5 +1,5 @@
 // Frank Hall III
-// January 24, 2023 ©
+// Feburary 7, 2023 ©
 // Project: Chapter 9 Program
 /* Description:
  *
@@ -57,25 +57,25 @@
  * 15. print the ascii value of the 12th character of the string sName
  *
  * Extend the Array project to include:
- * 
+ *
  * 16. Define a pointer to a double, pdArray.
  * 17. Assign the pointer, pdArray, to contain the address of the double array, dArr:
- * 18. Use the array name, dArr, to print out the array elements with subscript notation, 
+ * 18. Use the array name, dArr, to print out the array elements with subscript notation,
  *     [ ]. All on 1 line a space between each.
  * 19. Use the pointer to print out the array elements with pointer notation while not
- *     changing the pointer itself. Use a for loop. *( pdArray + Cnt1) would be an example. 
+ *     changing the pointer itself. Use a for loop. *( pdArray + Cnt1) would be an example.
  *     All on 1 line a space between each.
- * 20. Use the pointer to print out the array elements with pointer notation but change the 
+ * 20. Use the pointer to print out the array elements with pointer notation but change the
  *     pointer to point to the actual array element rather than the method in 18. All on 1 line.
  *     pdArray would do this if the loop has the following post loop operation:   pdArray++
- * 21. Use the array name for the double array and pointer notation to print the entire array, 
+ * 21. Use the array name for the double array and pointer notation to print the entire array,
  *     all on one line.
- * 22. Using a different pointer, piArray, allocate enough memory for 100 int's and assign the 
+ * 22. Using a different pointer, piArray, allocate enough memory for 100 int's and assign the
  *     address to the pointer.
- * 23. In a for loop assign every item in the array to be a random number from 1 to 49 
+ * 23. In a for loop assign every item in the array to be a random number from 1 to 49
  *     ( hint: rand() % 6 + 1 gives random numbers from 1 to 6 )
  * 24. Using cout print the first 10 items in the array, all on 1 line.
- * 
+ *
  */
 
 #include <iostream> // to give access to cout and cin
@@ -193,10 +193,47 @@ int main()
 	strcpy_s(sName, "Albert Einstein");
 
 	// 15.)
-	cout << "'" << sName[11] << "' is the 12th character in the char string \"sName\".\n";
+	cout << "'" << sName[11] << "' is the 12th character in the char string \"sName\".\n\n";
 
 	// 16.)
-	int *pdArray;
+	double* pdArray = nullptr; // initialize a double pointer pdArray
+
+	// 17.)
+	pdArray = dArr; // Assign the address of the dArr array to pdArray.
+
+	// 18.)
+	for (cnt1 = 0; cnt1 < 5; cnt1++)
+	{
+		cout << dArr[cnt1] << " ";
+	}
+	cout << "\n\n";
+
+	// 19.)
+	for (cnt1 = 0; cnt1 < 5; cnt1++)
+	{
+		cout << *(pdArray + cnt1) << " ";
+	}
+	cout << "\n\n";
+
+	// 20.)
+	for (cnt1 = 0; cnt1 < 5; cnt1++)
+	{
+		cout << *pdArray << " ";
+		pdArray++;
+	}
+	cout << "\n\n";
+
+	// 21.)
+
+
+	// 22.)
+
+
+	// 23.)
+
+
+	// 24.)
+	
 
 
 	return 0;
